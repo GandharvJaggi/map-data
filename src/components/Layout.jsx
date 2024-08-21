@@ -13,9 +13,9 @@ const Layout = () => {
 
   return (
     <div className='bg bg-[url("/public/world.png")] dark:bg-[url("")] dark:bg-fall-dark'>
-      <div className='bg bg-[#ffffffcc] dark:bg-transparent dark:bg-[url("/public/world.png")] dark:text-white min-h-screen flex flex-col'>
+      <div className='bg bg-[#eeeeeecc] dark:bg-transparent dark:bg-[url("/public/world.png")] dark:text-white min-h-screen flex flex-col'>
         <Header />
-        <div className='container px-2 lg:p-0 mx-auto my-2 py-2 flex-1 flex flex-col h-full'>
+        <div className='container px-4 mx-auto my-2 py-2 flex-1 flex flex-col h-full'>
           <Outlet />
         </div>
       </div>

@@ -36,9 +36,10 @@ const Home = () => {
 
   return (
     <>
-      <h1 className='text-center text-5xl mb-4'>
+      <h1 className='text-center text-5xl mb-2'>WorldInfo</h1>
+      <main className='mb-2 text-2xl text-center'>
         Best place to get generic country data from an API*
-      </h1>
+      </main>
       <Search setQuery={setQuery} />
       <div className='flex-1 my-4'>
         {query?.text && query.text.length > 0 ? (

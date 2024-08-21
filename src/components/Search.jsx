@@ -34,8 +34,8 @@ const Search = ({ setQuery, prompt = [] }) => {
       if (value?.text && value.text.length > 0) {
         if (value.text.length < 3) {
           setError('Enter atleast 3 characters.');
-        } else if (/\d/.test(value.text)) {
-          setError("Countries don't usually have numbers in them :/");
+        } else if (!/^[a-zA-Z]+$/.test(value.text)) {
+          setError("Countries don't usually have characters in them :/");
         } else {
           handleChange(value);
           setError();
@@ -50,7 +50,7 @@ const Search = ({ setQuery, prompt = [] }) => {
   return (
     <div className='w-full lg:w-2/3 mx-auto'>
       {prompt[0] && (
-        <div className='text-5xl text-gray-400 dark:text-gray-300 text-center my-4'>
+        <div className='text-5xl text-gray-500 dark:text-gray-300 text-center my-4'>
           {prompt[0]}
         </div>
       )}
@@ -112,7 +112,7 @@ const Search = ({ setQuery, prompt = [] }) => {
         </div>
       )}
       {prompt[1] && (
-        <div className='text-5xl text-gray-400 dark:text-gray-300 text-center my-4'>
+        <div className='text-5xl text-gray-500 dark:text-gray-300 text-center my-4'>
           {prompt[1]}
         </div>
       )}

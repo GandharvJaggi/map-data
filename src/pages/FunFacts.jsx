@@ -175,7 +175,7 @@ const FunFacts = () => {
         {Object.entries(prompts).map(([key, value]) => (
           <Link
             to={key}
-            className='self-start border hover:border-primary rounded-lg p-4 m-4'
+            className='gradient-hover self-start border bg-white dark:bg-fall-dark rounded-lg p-4 m-4'
             key={key}
           >
             {value.prompt.join(' {Country} ')}

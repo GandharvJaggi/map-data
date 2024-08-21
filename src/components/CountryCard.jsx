@@ -11,7 +11,7 @@ const CountryCard = ({ data, handleClick }) => {
           src={flags.png}
           alt={flags.alt}
           width={200}
-          className='rounded-l-lg border'
+          className='rounded-l-lg border height-auto max-w-[45vw]'
         />
       )}
       <div className='p-4 flex flex-col justify-between'>

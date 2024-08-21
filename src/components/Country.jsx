@@ -25,7 +25,7 @@ const Country = ({ data }) => {
 
   return (
     <div className='flex flex-col lg:flex-row'>
-      <div className='grid grid-cols-2 gap-2 flex-1'>
+      <div className='grid grid-cols-2 gap-2 flex-1 order-2'>
         <Field label='Common Name' value={name.common} />
         <Field label='Official Name' value={name.official} />
         <Field label='Area' value={`${area} km^2`} />
@@ -40,7 +40,7 @@ const Country = ({ data }) => {
         <Field label='Population' value={population} />
         <Field label='UN Member' value={unMember ? 'Yes' : 'No'} />
       </div>
-      <div>
+      <div className='order-1 lg:order-2'>
         <img
           src={flags.png}
           alt={flags.alt}

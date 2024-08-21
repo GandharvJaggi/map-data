@@ -50,12 +50,12 @@ const Search = ({ setQuery, prompt = [] }) => {
           {prompt[0]}
         </div>
       )}
-      <div className='flex align-center'>
+      <div className='flex align-center flex-wrap lg:flex-nowrap'>
         <div className='relative w-full'>
           <input
             type='text'
             placeholder='Try a country name'
-            className='border rounded-lg p-2 w-full bg-transparent'
+            className='border rounded-lg p-2 w-full bg-transparent mb-2 lg:mb-0'
             value={value?.text || ''}
             onChange={(e) => {
               if (prompt.length > 0) setPopup(true);
@@ -96,7 +96,7 @@ const Search = ({ setQuery, prompt = [] }) => {
             )}
         </div>
         <button
-          className='bg-primary rounded-lg ml-2 text-nowrap p-2'
+          className='bg-primary rounded-lg lg:ml-2 text-nowrap p-2 w-full lg:w-auto ml-0'
           onClick={handleLucky}
         >
           I&apos;m Feeling Lucky

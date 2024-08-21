@@ -24,7 +24,7 @@ const prompts = {
   '#area': {
     prompt: ["What's the total area of", ''],
     param: 'area',
-    extract: (fact) => fact.area && `${fact.coatOfArms.area} sq. Km`,
+    extract: (fact) => fact.area && `${fact.area} sq. Km`,
     type: 'string'
   },
   '#independent': {
@@ -116,7 +116,10 @@ const FunFacts = () => {
         <div className='text-center my-2'>
           <button
             className='float-left flex items-center py-2 hover:underline'
-            onClick={() => navigate(-1)}
+            onClick={() => {
+              setData();
+              navigate(-1);
+            }}
           >
             <FaChevronLeft className='pr-2' /> All Facts
           </button>

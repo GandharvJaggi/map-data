@@ -3,7 +3,7 @@ const CountryCard = ({ data, handleClick }) => {
 
   return (
     <div
-      className='border border-2 hover:border-primary rounded-lg flex'
+      className='border border-2 hover:border-primary rounded-lg flex items-center'
       onClick={handleClick}
     >
       {flags.png && (

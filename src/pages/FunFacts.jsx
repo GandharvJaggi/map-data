@@ -151,7 +151,7 @@ const FunFacts = () => {
                   </div>
                 ))}
               {prompts[hash].type === 'string' && (
-                <div className='text-center'>{data}</div>
+                <div className='text-center text-2xl'>{data}</div>
               )}
             </>
           )}

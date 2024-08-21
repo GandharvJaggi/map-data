@@ -24,8 +24,10 @@ const Search = ({ setQuery, prompt = [] }) => {
     if (data.length) {
       const luckyCountry = data[Math.ceil(Math.random() * data.length - 1)];
       setValue({ type: 'name', text: luckyCountry.name.common });
-      if (prompt.length > 0)
+      if (prompt.length > 0) {
+        setPopup(false);
         setQuery({ type: 'name', text: luckyCountry.name.common });
+      }
     }
   };
 

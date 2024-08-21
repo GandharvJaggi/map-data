@@ -170,7 +170,7 @@ const FunFacts = () => {
           content='Find facts about countries from a generic API'
         />
       </Helmet>
-      <h1 className='text-3xl text-center mb-2'>Fun Facts</h1>
+      <h1 className='text-5xl text-center mb-2'>Fun Facts</h1>
       <div className='flex flex-wrap justify-around'>
         {Object.entries(prompts).map(([key, value]) => (
           <Link

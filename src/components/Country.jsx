@@ -39,7 +39,10 @@ const Country = ({ data }) => {
           }
         />
         <Field label='Landlocked' value={landlocked ? 'Yes' : 'No'} />
-        <Field label='Languages' value={Object.values(languages)?.join(', ')} />
+        <Field
+          label='Languages'
+          value={languages && Object.values(languages)?.join(', ')}
+        />
         <Field label='Population' value={population} />
         <Field label='UN Member' value={unMember ? 'Yes' : 'No'} />
       </div>

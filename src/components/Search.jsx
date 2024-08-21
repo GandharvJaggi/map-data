@@ -32,10 +32,14 @@ const Search = ({ setQuery, prompt = [] }) => {
   useEffect(() => {
     if (prompt.length === 0) {
       if (value?.text && value.text.length > 0) {
-        if (value?.text && value.text.length > 2) {
+        if (value.text.length < 3) {
+          setError('Enter atleast 3 characters.');
+        } else if (/\d/.test(value.text)) {
+          setError("Countries don't usually have numbers in them :/");
+        } else {
           handleChange(value);
           setError();
-        } else setError('Enter atleast 3 characters.');
+        }
       } else {
         setError();
         setQuery({});
@@ -55,7 +59,7 @@ const Search = ({ setQuery, prompt = [] }) => {
           <input
             type='text'
             placeholder='Try a country name'
-            className='border rounded-lg p-2 w-full bg-transparent mb-2 lg:mb-0'
+            className='border rounded-lg p-2 w-full bg-white dark:bg-fall-dark mb-2 lg:mb-0'
             value={value?.text || ''}
             onChange={(e) => {
               if (prompt.length > 0) setPopup(true);

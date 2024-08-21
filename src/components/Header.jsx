@@ -19,9 +19,30 @@ const Header = () => {
   return (
     <header className='bg-base dark:bg-base-dark p-4'>
       <div className='flex items-center space-x-4 container mx-auto'>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/fun-facts'>Fun Facts</NavLink>
-        <NavLink to='/globe'>Globe</NavLink>
+        <NavLink
+          to='/'
+          className={({ isActive }) =>
+            `${isActive ? 'text-primary' : 'hover:text-primary'}`
+          }
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to='/fun-facts'
+          className={({ isActive }) =>
+            `${isActive ? 'text-primary' : 'hover:text-primary'}`
+          }
+        >
+          Fun Facts
+        </NavLink>
+        <NavLink
+          to='/globe'
+          className={({ isActive }) =>
+            `${isActive ? 'text-primary' : 'hover:text-primary'}`
+          }
+        >
+          Globe
+        </NavLink>
         <div className='flex justify-end flex-1'>
           <input
             type='checkbox'

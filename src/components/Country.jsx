@@ -33,10 +33,10 @@ const Country = ({ data }) => {
           label='Currency'
           value={Object.entries(currencies)
             .map(([key, value]) => `${value.symbol} ${value.name} (${key})`)
-            .join(', ')}
+            ?.join(', ')}
         />
         <Field label='Landlocked' value={landlocked ? 'Yes' : 'No'} />
-        <Field label='Languages' value={Object.values(languages).join(', ')} />
+        <Field label='Languages' value={Object.values(languages)?.join(', ')} />
         <Field label='Population' value={population} />
         <Field label='UN Member' value={unMember ? 'Yes' : 'No'} />
       </div>
@@ -48,14 +48,14 @@ const Country = ({ data }) => {
           className='border mb-4'
         />
         <div className='grid grid-cols-2 gap-2'>
-          <Field label='Capital' value={capital.join(', ')} />
-          <Field label='Continent' value={continents.join(', ')} />
+          <Field label='Capital' value={capital?.join(', ')} />
+          <Field label='Continent' value={continents?.join(', ')} />
           <Field label='Region' value={region} />
           <Field label='Sub Region' value={subregion} />
         </div>
         {coatOfArms.png && (
           <>
-              <div className='text-gray-400 text-sm mb-2'>Coat of Arms</div>
+            <div className='text-gray-400 text-sm mb-2'>Coat of Arms</div>
             <img
               src={coatOfArms.png}
               alt='Coat of Arms'

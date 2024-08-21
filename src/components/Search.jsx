@@ -56,7 +56,7 @@ const Search = ({ setQuery, prompt = [] }) => {
             type='text'
             placeholder='Try a country name'
             className='border rounded-lg p-2 w-full bg-transparent'
-            value={value?.text}
+            value={value?.text || ''}
             onChange={(e) => {
               if (prompt.length > 0) setPopup(true);
               setValue({ type: 'name', text: e.target.value });

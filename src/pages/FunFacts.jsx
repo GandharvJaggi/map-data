@@ -118,6 +118,7 @@ const FunFacts = () => {
             className='float-left flex items-center py-2 hover:underline'
             onClick={() => {
               setData();
+              setQuery();
               navigate(-1);
             }}
           >

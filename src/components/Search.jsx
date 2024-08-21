@@ -35,7 +35,9 @@ const Search = ({ setQuery, prompt = [] }) => {
         if (value.text.length < 3) {
           setError('Enter atleast 3 characters.');
         } else if (!/^[a-zA-Z]+$/.test(value.text)) {
-          setError("Countries don't usually have characters in them :/");
+          setError(
+            "Countries don't usually have special characters in them :/"
+          );
         } else {
           handleChange(value);
           setError();

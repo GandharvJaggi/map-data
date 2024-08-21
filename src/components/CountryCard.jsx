@@ -17,7 +17,11 @@ const CountryCard = ({ data, handleClick }) => {
       <div className='p-4 flex flex-col justify-between'>
         <div>
           <div className='text-xl font-semibold'>{name.common}</div>
-          {capital && <div className='text-gray-300'>{capital.join(', ')}</div>}
+          {capital && (
+            <div className='text-gray-600 dark:text-gray-300'>
+              {capital.join(', ')}
+            </div>
+          )}
         </div>
         <div className='text-sm'>
           {region}, {subregion}
